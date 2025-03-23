@@ -23,7 +23,7 @@ namespace MauiApp1AppMinhasCompras.Helpers
 
             return _conn.QueryAsync<Produto>(
                 sql, p.Descricao, p.Quantidade, p.Preco, p.Id
-            );
+            ); 
         }
 
         public Task<int> Delete(int id) 
