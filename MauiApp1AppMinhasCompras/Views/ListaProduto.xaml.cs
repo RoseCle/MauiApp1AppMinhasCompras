@@ -1,7 +1,7 @@
 using MauiApp1AppMinhasCompras.Models;
 using System.Collections.ObjectModel;
 
-namespace MauiApp1AppMinhasCompras.Views;
+namespace MauiAppMinhasCompras.Views;
 
 public partial class ListaProduto : ContentPage
 {
@@ -63,9 +63,9 @@ public partial class ListaProduto : ContentPage
 
     private void ToolbarItem_Clicked_1(object sender, EventArgs e)
     {
-        double soma = lista.Sum(i => i.Total);
+        double soma = lista.Sum(static i => i.Total);
 
-        string msg = $"O total é {soma:C}";
+        string msg = $"O Total é {soma:C}";
 
         DisplayAlert("Total dos Produtos", msg, "OK");
     }
@@ -79,7 +79,7 @@ public partial class ListaProduto : ContentPage
             Produto p = selecinado.BindingContext as Produto;
 
             bool confirm = await DisplayAlert(
-                "Tem Certeza?", $"Remover {p.Descricao}?", "Sim", "Não");
+                "Tem Certeza?", message: $"Remover {p.Descricao}?", "Sim", "Não");
 
             if (confirm)
             {
@@ -110,5 +110,3 @@ public partial class ListaProduto : ContentPage
         }
     }
 }
-
-
