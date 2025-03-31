@@ -1,7 +1,7 @@
 using MauiApp1AppMinhasCompras.Models;
 using System.Collections.ObjectModel;
 
-namespace MauiAppMinhasCompras.Views;
+namespace MauiApp1AppMinhasCompras.Views;
 
 public partial class ListaProduto : ContentPage
 {
